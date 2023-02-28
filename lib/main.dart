@@ -23,9 +23,15 @@ class _MyAppState extends State<MyApp> {
     'Xonim',
     'Yaxna',
     'Dimlama',
-    'Lagmon',
-    'Dolma',
-    'Tuxum',
+    'Lag\'mon',
+    'Do\'lma',
+    'Quymoq',
+    'Hot-Dog',
+    'Pizza',
+    'Burger',
+    'Shaurma',
+    'Lavash',
+    'Fry',
   ];
   @override
   Widget build(BuildContext context) {
@@ -41,12 +47,16 @@ class _MyAppState extends State<MyApp> {
                 bottom: BorderSide(style: BorderStyle.solid, width: 3.5),
                 right: BorderSide(style: BorderStyle.solid, width: 3.5),
                 top: BorderSide(style: BorderStyle.solid, width: 3.5)),
-            elevation: 40,
+            elevation: 80,
             child: ListTile(
+              tileColor: Color.fromARGB(255, 211, 211, 211),
               iconColor: Colors.black,
-              textColor: Colors.green,
+              textColor: Colors.blue,
               trailing: Icon(Icons.arrow_forward_ios),
-              leading: CircleAvatar(child: Icon(Icons.person)),
+              subtitle: Center(child: Text('$index')),
+              leading: CircleAvatar(
+                  backgroundColor: Colors.yellow,
+                  child: Icon(Icons.dinner_dining_outlined)),
               title: Center(
                 child: Text(meal[index]),
               ),
