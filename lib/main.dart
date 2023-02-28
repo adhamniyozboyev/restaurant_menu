@@ -15,12 +15,24 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  List meal = [
+    'Somsa',
+    'Manti',
+    'Palov',
+    'Chuchvara',
+    'Xonim',
+    'Yaxna',
+    'Dimlama',
+    'Lagmon',
+    'Dolma',
+    'Tuxum',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Center(child: Text('Items'))),
       body: ListView.builder(
-        itemCount: 15,
+        itemCount: meal.length,
         itemBuilder: (context, index) {
           return Card(
             shadowColor: Colors.red,
@@ -34,12 +46,9 @@ class _MyAppState extends State<MyApp> {
               iconColor: Colors.black,
               textColor: Colors.green,
               trailing: Icon(Icons.arrow_forward_ios),
-              subtitle: Center(child: Text('thing${index + 1}')),
               leading: CircleAvatar(child: Icon(Icons.person)),
               title: Center(
-                child: Text(
-                  'Item # ${index + 1}',
-                ),
+                child: Text(meal[index]),
               ),
             ),
           );
