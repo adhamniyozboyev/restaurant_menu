@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
               iconColor: Colors.black,
               textColor: Colors.green,
               trailing: Icon(Icons.arrow_forward_ios),
-              subtitle: Center(child: Text('subtitle${index + 1}')),
+              subtitle: Center(child: Text('thing${index + 1}')),
               leading: CircleAvatar(child: Icon(Icons.person)),
               title: Center(
                 child: Text(
