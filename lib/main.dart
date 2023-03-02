@@ -1,4 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:restaurant_menu/burger.dart';
+import 'package:restaurant_menu/chuchvara.dart';
+import 'package:restaurant_menu/dimlama.dart';
+import 'package:restaurant_menu/dolma.dart';
+import 'package:restaurant_menu/fry.dart';
+import 'package:restaurant_menu/hot_dog.dart';
+import 'package:restaurant_menu/lagmon.dart';
+import 'package:restaurant_menu/lavash.dart';
+import 'package:restaurant_menu/manti.dart';
+import 'package:restaurant_menu/palov.dart';
+import 'package:restaurant_menu/pizza.dart';
+import 'package:restaurant_menu/quymoq.dart';
+import 'package:restaurant_menu/shaourma.dart';
+import 'package:restaurant_menu/somsa.dart';
+import 'package:restaurant_menu/xonim.dart';
+import 'package:restaurant_menu/yaxna.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -15,6 +31,26 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  List widgets = [
+    Burger(),
+    Chuchvara(),
+    Dimlama(),
+    Dolma(),
+    Fry(),
+    HotDog(),
+    Lagmon(),
+    Lavash(),
+    Manti(),
+    Palov(),
+    Pizza(),
+    Quymoq(),
+    Shaourma(),
+    Somsa(),
+    Xonim(),
+    Yaxna(),
+  ];
+  int direct = 0;
+  Color col = Color(0xFF8FE9A4);
   List meal = [
     'Somsa',
     'Manti',
@@ -41,18 +77,38 @@ class _MyAppState extends State<MyApp> {
         itemCount: meal.length,
         itemBuilder: (context, index) {
           return Card(
-            shadowColor: Colors.red,
-            shape: Border(
-                left: BorderSide(style: BorderStyle.solid, width: 3.5),
-                bottom: BorderSide(style: BorderStyle.solid, width: 3.5),
-                right: BorderSide(style: BorderStyle.solid, width: 3.5),
-                top: BorderSide(style: BorderStyle.solid, width: 3.5)),
-            elevation: 80,
+            shadowColor: Colors.blue,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0)),
+            elevation: 10,
+            color: Colors.orange,
             child: ListTile(
-              tileColor: Color.fromARGB(255, 211, 211, 211),
+              onLongPress: () {
+                direct++;
+                direct = direct % 3;
+                if (direct == 0) {
+                  col = Color(0xFFD3F3D5);
+                }
+                if (direct == 1) {
+                  col = Color.fromARGB(255, 226, 224, 244);
+                }
+                if (direct == 2) {
+                  col = Color.fromARGB(255, 238, 243, 221);
+                }
+                setState(() {});
+              },
+              shape: BeveledRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(35),
+                      bottomRight: Radius.circular(35)),
+                  side: BorderSide(width: 2, color: Colors.black)),
+              tileColor: col,
               iconColor: Colors.black,
               textColor: Colors.blue,
-              trailing: Icon(Icons.arrow_forward_ios),
+              trailing: IconButton(
+                icon: Icon(Icons.arrow_forward_ios),
+                onPressed: () {},
+              ),
               subtitle: Center(child: Text('$index')),
               leading: CircleAvatar(
                   backgroundColor: Colors.yellow,
