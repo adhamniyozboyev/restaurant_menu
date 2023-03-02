@@ -12,7 +12,9 @@ class Quymoq extends StatefulWidget {
 class _QuymoqState extends State<Quymoq> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(appBar: AppBar(
+        title: Text('Quymoq'),
+      ),
       body: Column(
         children: [Image.asset('images/quymoq.jpg')],
       ),

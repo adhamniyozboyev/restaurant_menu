@@ -12,7 +12,9 @@ class HotDog extends StatefulWidget {
 class _HotDogState extends State<HotDog> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(appBar: AppBar(
+        title: Text('Hot-dog'),
+      ),
       body: Column(
         children: [Image.asset('images/hotdog.jpg')],
       ),

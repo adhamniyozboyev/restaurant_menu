@@ -28,9 +28,20 @@ class _SomsaState extends State<Somsa> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(appBar: AppBar(title: Text('Somsa retsept')),
       body: Column(
-        children: [Image.asset('images/somsa.jpg')],
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          // IconButton(
+          //     onPressed: () {
+          //       Navigator.pop(context);
+          //     },
+          //     icon: Icon(
+          //       Icons.arrow_back,
+          //       size: 30,
+          //     )),
+          Image.asset('images/somsa.jpg')
+        ],
       ),
     );
   }

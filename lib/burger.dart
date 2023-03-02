@@ -12,7 +12,7 @@ class Burger extends StatefulWidget {
 class _BurgerState extends State<Burger> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(appBar: AppBar(title: Text('Burger'),),
       body: Column(
         children: [
           Image.asset('images/burger.jpg')

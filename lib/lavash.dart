@@ -12,7 +12,9 @@ class Lavash extends StatefulWidget {
 class _LavashState extends State<Lavash> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(appBar: AppBar(
+        title: Text('Lavash'),
+      ),
       body: Column(
         children: [Image.asset('images/lavash.jpg')],
       ),

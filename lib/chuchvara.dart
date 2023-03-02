@@ -13,6 +13,9 @@ class _ChuchvaraState extends State<Chuchvara> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Chuchvara'),
+      ),
       body: Column(
         children: [Image.asset('images/chuchvara.jpg')],
       ),

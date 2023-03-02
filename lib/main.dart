@@ -24,17 +24,21 @@ void main() {
         return MyApp();
       },
       '/somsa': (context) => Somsa(),
-        '/manti': (context) => Manti(),
-          '/palov': (context) => Palov(),
-            '/chuchvara': (context) => Chuchvara(),
-              '/xonim': (context) => Xonim(),
-                '/yaxna': (context) => Yaxna(),
-                '/dimlama':(context) => Dimlama(),
-                  '/lagmon': (context) => Lagmon(),
-                    '/dolma': (context) => Dolma(),
-                      '/quymoq': (context) => Quymoq(),
-
-      
+      '/manti': (context) => Manti(),
+      '/palov': (context) => Palov(),
+      '/chuchvara': (context) => Chuchvara(),
+      '/xonim': (context) => Xonim(),
+      '/yaxna': (context) => Yaxna(),
+      '/dimlama': (context) => Dimlama(),
+      '/lagmon': (context) => Lagmon(),
+      '/dolma': (context) => Dolma(),
+      '/quymoq': (context) => Quymoq(),
+      '/hotdog': (context) => HotDog(),
+      '/pizza': (context) => Pizza(),
+      '/burger': (context) => Burger(),
+      '/shaurma': (context) => Shaourma(),
+      '/lavash': (context) => Lavash(),
+      '/fry': (context) => Fry()
     },
     debugShowCheckedModeBanner: false,
     home: MyApp(),
@@ -49,6 +53,25 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  List wid = [
+    '/somsa',
+    '/manti',
+    '/palov',
+    '/chuchvara',
+    '/xonim',
+    '/yaxna',
+    '/dimlama',
+    '/lagmon',
+    '/dolma',
+    '/quymoq',
+    '/hotdog',
+    '/pizza',
+    '/burger',
+    '/shaurma',
+    '/lavash',
+    '/fry'
+  ];
+
   int direct = 0;
   Color col = Color(0xFF8FE9A4);
   List meal = [
@@ -72,7 +95,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Center(child: Text('Items'))),
+      appBar: AppBar(title: Center(child: Text('Foods'))),
       body: ListView.builder(
         itemCount: meal.length,
         itemBuilder: (context, index) {
@@ -109,7 +132,7 @@ class _MyAppState extends State<MyApp> {
                 icon: Icon(Icons.arrow_forward_ios),
                 onPressed: () {
                   setState(() {
-                    Navigator.pushNamed(context, '/second');
+                    Navigator.pushNamed(context, wid[index]);
                   });
                 },
               ),

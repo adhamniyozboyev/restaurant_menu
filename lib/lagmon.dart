@@ -12,6 +12,12 @@ class Lagmon extends StatefulWidget {
 class _LagmonState extends State<Lagmon> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Column(children: [Image.asset('images/lagmon.jpg')],),);
+    return Scaffold(appBar: AppBar(
+        title: Text('Lag\'mon'),
+      ),
+      body: Column(
+        children: [Image.asset('images/lagmon.jpg')],
+      ),
+    );
   }
 }

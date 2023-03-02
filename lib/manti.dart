@@ -12,9 +12,11 @@ class Manti extends StatefulWidget {
 class _MantiState extends State<Manti> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(appBar: AppBar(
+        title: Text('Manti'),
+      ),
       body: Column(
-        children: [Image.asset('images/manti.jpg')],
+        children: [Center(child: Image.asset('images/manti.jpg'))],
       ),
     );
   }

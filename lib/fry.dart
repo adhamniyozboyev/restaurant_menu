@@ -12,7 +12,9 @@ class Fry extends StatefulWidget {
 class _FryState extends State<Fry> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(appBar: AppBar(
+        title: Text('Fry'),
+      ),
       body: Column(
         children: [Image.asset('images/fry.jpg')],
       ),

@@ -13,6 +13,9 @@ class _ShaourmaState extends State<Shaourma> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Shourma'),
+      ),
       body: Column(children: [Image.asset('images/shaurma.jpg')]),
     );
   }

@@ -12,7 +12,9 @@ class Xonim extends StatefulWidget {
 class _XonimState extends State<Xonim> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(appBar: AppBar(
+        title: Text('Xonim'),
+      ),
       body: Column(
         children: [Image.asset('images/xonim.jpg')],
       ),

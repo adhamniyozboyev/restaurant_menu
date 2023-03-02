@@ -12,6 +12,12 @@ class Palov extends StatefulWidget {
 class _PalovState extends State<Palov> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Column(children: [Image.asset('images/palov.jpg')],),);
+    return Scaffold(appBar: AppBar(
+        title: Text('Palov'),
+      ),
+      body: Column(
+        children: [Image.asset('images/palov.jpg')],
+      ),
+    );
   }
 }

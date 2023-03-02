@@ -12,7 +12,9 @@ class Dimlama extends StatefulWidget {
 class _DimlamaState extends State<Dimlama> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(appBar: AppBar(
+        title: Text('Dimlama'),
+      ),
       body: Column(
         children: [
           Image.asset('images/dimlama.jpg')

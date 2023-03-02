@@ -12,7 +12,9 @@ class Dolma extends StatefulWidget {
 class _DolmaState extends State<Dolma> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(appBar: AppBar(
+        title: Text('Do`lma'),
+      ),
       body: Column(
         children: [
           Image.asset('images/dolma.jpg')
