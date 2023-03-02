@@ -18,6 +18,24 @@ import 'package:restaurant_menu/yaxna.dart';
 
 void main() {
   runApp(MaterialApp(
+    initialRoute: '/first',
+    routes: {
+      '/main': (context) {
+        return MyApp();
+      },
+      '/somsa': (context) => Somsa(),
+        '/manti': (context) => Manti(),
+          '/palov': (context) => Palov(),
+            '/chuchvara': (context) => Chuchvara(),
+              '/xonim': (context) => Xonim(),
+                '/yaxna': (context) => Yaxna(),
+                '/dimlama':(context) => Dimlama(),
+                  '/lagmon': (context) => Lagmon(),
+                    '/dolma': (context) => Dolma(),
+                      '/quymoq': (context) => Quymoq(),
+
+      
+    },
     debugShowCheckedModeBanner: false,
     home: MyApp(),
   ));
@@ -31,24 +49,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  List widgets = [
-    Burger(),
-    Chuchvara(),
-    Dimlama(),
-    Dolma(),
-    Fry(),
-    HotDog(),
-    Lagmon(),
-    Lavash(),
-    Manti(),
-    Palov(),
-    Pizza(),
-    Quymoq(),
-    Shaourma(),
-    Somsa(),
-    Xonim(),
-    Yaxna(),
-  ];
   int direct = 0;
   Color col = Color(0xFF8FE9A4);
   List meal = [
@@ -81,7 +81,7 @@ class _MyAppState extends State<MyApp> {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0)),
             elevation: 10,
-            color: Colors.orange,
+            color: Colors.yellow,
             child: ListTile(
               onLongPress: () {
                 direct++;
@@ -107,9 +107,13 @@ class _MyAppState extends State<MyApp> {
               textColor: Colors.blue,
               trailing: IconButton(
                 icon: Icon(Icons.arrow_forward_ios),
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    Navigator.pushNamed(context, '/second');
+                  });
+                },
               ),
-              subtitle: Center(child: Text('$index')),
+              subtitle: Center(child: Text('${index + 1}')),
               leading: CircleAvatar(
                   backgroundColor: Colors.yellow,
                   child: Icon(Icons.dinner_dining_outlined)),
