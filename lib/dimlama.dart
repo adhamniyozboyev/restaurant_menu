@@ -12,18 +12,26 @@ class Dimlama extends StatefulWidget {
 class _DimlamaState extends State<Dimlama> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
         title: Text('Dimlama'),
       ),
       body: Column(
         children: [
-          Center(child: Image.asset('images/dimlama.jpg')),
+          Center(
+              child: Image.asset(
+            'images/dimlama.jpg',
+            width: 400,
+            height: 200,
+            fit: BoxFit.fill,
+          )),
           Card(
-             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-              side: BorderSide(color: Colors.red, width: 3)),
-          color: Color.fromARGB(255, 73, 225, 106),
-            child: Text(''' Masalliqlar:
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+                side: BorderSide(color: Colors.red, width: 3)),
+            color: Color.fromARGB(255, 73, 225, 106),
+            child: Text(
+              ''' Masalliqlar:
 Portsiya:  
 8
  
@@ -43,7 +51,10 @@ Portsiya:
 *200 gramm mol go'shtidan qiyma
 *60 gramm guruch
 *200-250 millilitr suv
-*ta'bga qarab tuz va murch''',style: TextStyle(fontSize: 20),),)
+*ta'bga qarab tuz va murch''',
+              style: TextStyle(fontSize: 20),
+            ),
+          )
         ],
       ),
     );

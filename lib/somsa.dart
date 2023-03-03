@@ -17,14 +17,20 @@ class _SomsaState extends State<Somsa> {
         title: Text('Somsa'),
       ),
       body: Column(children: [
-        Center(child: Image.asset('images/somsa.jpg')),
+        Center(
+            child: Image.asset(
+          'images/somsa.jpg',
+          width: 400,
+          height: 200,
+          fit: BoxFit.fill,
+        )),
         Card(
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-              side: BorderSide(color: Colors.red, width: 3)),
-          color: Color.fromARGB(255, 34, 187, 75),
-          child: Text(
-            '''  Portsiya:  
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+                side: BorderSide(color: Colors.red, width: 3)),
+            color: Color.fromARGB(255, 34, 187, 75),
+            child: Text(
+              '''  Portsiya:  
 12
  
 XAMIR UCHUN
@@ -46,9 +52,10 @@ SURTISH UCHUN
 *2 ta tuxum oqi
 *2 ta tuxum sarig'i
 *30 gramm kunjut''',
-            style: TextStyle(fontSize: 20,
-          ),
-        ))
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ))
       ]),
     );
   }

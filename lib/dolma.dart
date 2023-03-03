@@ -17,13 +17,22 @@ class _DolmaState extends State<Dolma> {
         title: Text('Do`lma'),
       ),
       body: Column(
-        children: [Center(child: Image.asset('images/dolma.jpg')),
-        Card(
-           shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-              side: BorderSide(color: Color.fromARGB(255, 70, 54, 244), width: 3)),
-          color: Color.fromARGB(255, 73, 225, 106),
-          child: Text(''' Masalliqlar:
+        children: [
+          Center(
+              child: Image.asset(
+            'images/dolma.jpg',
+            width: 400,
+            height: 200,
+            fit: BoxFit.fill,
+          )),
+          Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+                side: BorderSide(
+                    color: Color.fromARGB(255, 70, 54, 244), width: 3)),
+            color: Color.fromARGB(255, 73, 225, 106),
+            child: Text(
+              ''' Masalliqlar:
 *14-16 dona bulg'or qalampiri
 *600 gramm mol go'shtidan qiyma
 *100-120 gramm guruch
@@ -38,7 +47,10 @@ class _DolmaState extends State<Dolma> {
 *4-5 ta sarimsoqpiyoz tishchasi
 *yarim bog' xohlagan ko'katlar
 *qovurish uchun o'simlik yog'i
-''',style: TextStyle(fontSize: 20),),)
+''',
+              style: TextStyle(fontSize: 20),
+            ),
+          )
         ],
       ),
     );

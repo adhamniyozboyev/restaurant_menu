@@ -18,12 +18,20 @@ class _QuymoqState extends State<Quymoq> {
       ),
       body: Column(
         children: [
-          Center(child: Image.asset('images/quymoq.jpg')),
-          Card( shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-              side: BorderSide(color: Colors.red, width: 3)),
-          color: Color.fromARGB(255, 73, 225, 106),
-            child: Text(''' Masalliqlar:
+          Center(
+              child: Image.asset(
+            'images/quymoq.jpg',
+            width: 400,
+            height: 200,
+            fit: BoxFit.fill,
+          )),
+          Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+                side: BorderSide(color: Colors.red, width: 3)),
+            color: Color.fromARGB(255, 73, 225, 106),
+            child: Text(
+              ''' Masalliqlar:
 Portsiya:  
 18
  
@@ -38,7 +46,9 @@ Portsiya:
 *30 gramm ko'kat
 *NACHINKA UCHUN
 *150 gramm tuzlangan losos balig'i filesi
-*200 gramm tvorogli pishloq''',style: TextStyle(fontSize: 20),),
+*200 gramm tvorogli pishloq''',
+              style: TextStyle(fontSize: 20),
+            ),
           )
         ],
       ),

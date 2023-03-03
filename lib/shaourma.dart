@@ -17,12 +17,20 @@ class _ShaourmaState extends State<Shaourma> {
         title: Text('Shourma'),
       ),
       body: Column(children: [
-        Center(child: Image.asset('images/shaurma.jpg')),
-        Card( shape: RoundedRectangleBorder(
+        Center(
+            child: Image.asset(
+          'images/shaurma.jpg',
+          width: 400,
+          height: 200,
+          fit: BoxFit.fill,
+        )),
+        Card(
+          shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15),
               side: BorderSide(color: Colors.red, width: 3)),
           color: Color.fromARGB(255, 73, 225, 106),
-          child: Text(''' Masalliqlar:
+          child: Text(
+            ''' Masalliqlar:
 Portsiya:  
 5
  
@@ -40,7 +48,9 @@ Portsiya:
 *1 choy qoshiq shakar
 *1 choy qoshiq tuz
 *ta'bga qarab qora murch
-*qovurish uchun o'simlik yog'i''',style: TextStyle(fontSize: 20),),
+*qovurish uchun o'simlik yog'i''',
+            style: TextStyle(fontSize: 20),
+          ),
         )
       ]),
     );

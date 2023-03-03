@@ -18,11 +18,19 @@ class _XonimState extends State<Xonim> {
       ),
       body: Column(
         children: [
-          Center(child: Image.asset('images/xonim.jpg')),
-          Card( shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-              side: BorderSide(color: Color.fromARGB(222, 139, 237, 19), width: 5)),
-          color: Color.fromARGB(255, 239, 6, 157),
+          Center(
+              child: Image.asset(
+            'images/xonim.jpg',
+            width: 400,
+            height: 200,
+            fit: BoxFit.fill,
+          )),
+          Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+                side: BorderSide(
+                    color: Color.fromARGB(222, 139, 237, 19), width: 5)),
+            color: Color.fromARGB(255, 239, 6, 157),
             child: Text(
               ''' Masalliqlar:
 Portsiya:  
@@ -44,7 +52,9 @@ Portsiya:
 *BEZATISH UCHUN:
 *1 bosh piyoz
 *1 bog' shivit''',
-              style: TextStyle(fontSize: 25,),
+              style: TextStyle(
+                fontSize: 25,
+              ),
             ),
           )
         ],

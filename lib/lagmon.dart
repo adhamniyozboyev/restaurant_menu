@@ -18,7 +18,13 @@ class _LagmonState extends State<Lagmon> {
       ),
       body: Column(
         children: [
-          Center(child: Image.asset('images/lagmon.jpg')),
+          Center(
+              child: Image.asset(
+            'images/lagmon.jpg',
+            width: 400,
+            height: 200,
+            fit: BoxFit.fill,
+          )),
           Card(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),

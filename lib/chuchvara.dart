@@ -18,11 +18,19 @@ class _ChuchvaraState extends State<Chuchvara> {
       ),
       body: Column(
         children: [
-          Center(child: Image.asset('images/chuchvara.jpg')),
-          Card(  shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-              side: BorderSide(color: Color.fromARGB(255, 232, 27, 12), width: 3)),
-          color: Color.fromARGB(255, 188, 247, 100),
+          Center(
+              child: Image.asset(
+            'images/chuchvara.jpg',
+            width: 400,
+            height: 200,
+            fit: BoxFit.fill,
+          )),
+          Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+                side: BorderSide(
+                    color: Color.fromARGB(255, 232, 27, 12), width: 3)),
+            color: Color.fromARGB(255, 188, 247, 100),
             child: Text(
               ''' Masalliqlar:
 XAMIRIGA:

@@ -18,11 +18,18 @@ class _YaxnaState extends State<Yaxna> {
       ),
       body: Column(
         children: [
-          Center(child: Image.asset('images/yaxna.jpg')),
-          Card( shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-              side: BorderSide(color: Colors.red, width: 3)),
-          color: Color.fromARGB(255, 170, 154, 251),
+          Center(
+              child: Image.asset(
+            'images/yaxna.jpg',
+            width: 400,
+            height: 200,
+            fit: BoxFit.fill,
+          )),
+          Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+                side: BorderSide(color: Colors.red, width: 3)),
+            color: Color.fromARGB(255, 170, 154, 251),
             child: Text(
               '''Quyidagi mahsulotlar kerak bo‘ladi:
 

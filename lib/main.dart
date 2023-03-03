@@ -70,7 +70,7 @@ class _MyAppState extends State<MyApp> {
   ];
 
   int direct = 0;
-  Color col = Color.fromARGB(255, 65, 243, 68);
+  Color col = Colors.white70;
   List meal = [
     'Somsa',
     'Manti',
@@ -101,14 +101,14 @@ class _MyAppState extends State<MyApp> {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0)),
             elevation: 10,
-            color: Colors.purple,
+            color: Color.fromARGB(255, 236, 110, 65),
             child: ListTile(
               onTap: () => Navigator.pushNamed(context, wid[index]),
               onLongPress: () {
                 direct++;
                 direct = direct % 3;
                 if (direct == 0) {
-                  col = Color.fromARGB(255, 77, 62, 210);
+                  col = Colors.white70 ;
                 }
                 if (direct == 1) {
                   col = Color.fromARGB(255, 224, 120, 141);
@@ -120,9 +120,9 @@ class _MyAppState extends State<MyApp> {
               },
               shape: BeveledRectangleBorder(
                   borderRadius: BorderRadius.circular(37),
-                  side: BorderSide(width: 2, color: Colors.black)),
+                  side: BorderSide(width: 2, color: Colors.blue)),
               tileColor: col,
-              iconColor: Colors.black,
+              iconColor: Colors.blue,
               textColor: Colors.white,
               trailing: IconButton(
                 icon: Icon(Icons.arrow_forward_ios),
@@ -134,7 +134,11 @@ class _MyAppState extends State<MyApp> {
               ),
               subtitle: Center(child: Text('')),
               leading: CircleAvatar(
-                  backgroundColor: Colors.orange, child: Text('${index + 1}')),
+                  backgroundColor: Colors.blue,
+                  child: Text(
+                    '${index + 1}',
+                    style: TextStyle(color: Colors.white),
+                  )),
               title: Center(
                 child: Text(
                   meal[index],

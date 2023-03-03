@@ -22,11 +22,15 @@ class _BurgerState extends State<Burger> {
           Center(
             child: Image.asset(
               'images/burger.jpg',
+              width: 400,
+              height: 200,
+              fit: BoxFit.fill,
             ),
           ),
           Card(
+            margin: EdgeInsets.all(25),
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
+                borderRadius: BorderRadius.circular(10),
                 side: BorderSide(color: Colors.red, width: 3)),
             color: Color(0xFF9BB1D7),
             child: Text(

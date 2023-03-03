@@ -18,12 +18,20 @@ class _FryState extends State<Fry> {
       ),
       body: Column(
         children: [
-          Center(child: Image.asset('images/fry.jpg')),
-          Card( shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-              side: BorderSide(color: Colors.red, width: 3)),
-          color: Color.fromARGB(255, 73, 225, 106),
-            child: Text(''' Masalliqlar:
+          Center(
+              child: Image.asset(
+            'images/fry.jpg',
+            width: 400,
+            height: 200,
+            fit: BoxFit.fill,
+          )),
+          Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+                side: BorderSide(color: Colors.red, width: 3)),
+            color: Color.fromARGB(255, 73, 225, 106),
+            child: Text(
+              ''' Masalliqlar:
 Portsiya:  
 3
  
@@ -36,7 +44,9 @@ Portsiya:
 *1 choy qoshiq rozmarin
 *1 choy qoshiq qora murch
 *40 millilitr zaytun yog'i
-''',style: TextStyle(fontSize: 20),),
+''',
+              style: TextStyle(fontSize: 20),
+            ),
           )
         ],
       ),
