@@ -92,7 +92,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Center(child: Text('Foods'))),
+      appBar: AppBar(title: Center(child: Text('Menu of foods'))),
       body: ListView.builder(
         itemCount: meal.length,
         itemBuilder: (context, index) {
