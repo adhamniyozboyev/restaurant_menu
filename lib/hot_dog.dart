@@ -19,7 +19,10 @@ class _HotDogState extends State<HotDog> {
       body: Column(
         children: [
           Center(child: Image.asset('images/hotdog.jpg')),
-          Card(
+          Card( shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+              side: BorderSide(color: Colors.red, width: 3)),
+          color: Color.fromARGB(255, 73, 225, 106),
             child: Text('''*120 millilitr iliq sut
 *120 millilitr iliq suv
 *1 osh qoshiq quruq xamirturush

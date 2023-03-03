@@ -18,7 +18,12 @@ class _DimlamaState extends State<Dimlama> {
       body: Column(
         children: [
           Center(child: Image.asset('images/dimlama.jpg')),
-          Card(child: Text(''' Masalliqlar:
+          Card(
+             shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+              side: BorderSide(color: Colors.red, width: 3)),
+          color: Color.fromARGB(255, 73, 225, 106),
+            child: Text(''' Masalliqlar:
 Portsiya:  
 8
  

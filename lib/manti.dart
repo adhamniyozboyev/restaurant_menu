@@ -19,7 +19,10 @@ class _MantiState extends State<Manti> {
       body: Column(
         children: [
           Center(child: Image.asset('images/manti.jpg')),
-          Card(
+          Card(  shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+              side: BorderSide(color: Colors.blue, width: 4)),
+          color: Color.fromARGB(255, 224, 238, 29),
             child: Text(''' Masalliqlar:
 Portsiya:  
 10
@@ -32,7 +35,7 @@ Portsiya:
 *NACHINKASI UCHUN
 *200 gramm mol go'shtidan qiyma
 *100 gramm piyoz
-*ta'bga ko'ra tuz va murch''',style: TextStyle(fontSize: 20),),
+*ta'bga ko'ra tuz va murch''',style: TextStyle(fontSize: 30),),
           )
         ],
       ),

@@ -25,10 +25,10 @@ class _BurgerState extends State<Burger> {
             ),
           ),
           Card(
-             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-              side: BorderSide(color: Colors.red, width: 3)),
-          color: Color(0xFF9BB1D7),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+                side: BorderSide(color: Colors.red, width: 3)),
+            color: Color(0xFF9BB1D7),
             child: Text(
               '''Kerakli mahsulotlar (4 portsiya uchun):
 
@@ -38,7 +38,7 @@ class _BurgerState extends State<Burger> {
   *1 osh qoshiq mayonez.
   *1 osh qoshiq ketchup.
   *Tuz va murch.''',
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 30),
             ),
           )
         ],

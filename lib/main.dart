@@ -18,11 +18,8 @@ import 'package:restaurant_menu/yaxna.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: '/first',
     routes: {
-      '/main': (context) {
-        return MyApp();
-      },
+      '/main': (context) => MyApp(),
       '/somsa': (context) => Somsa(),
       '/manti': (context) => Manti(),
       '/palov': (context) => Palov(),
@@ -73,7 +70,7 @@ class _MyAppState extends State<MyApp> {
   ];
 
   int direct = 0;
-  Color col = Color(0xFF8FE9A4);
+  Color col = Color.fromARGB(255, 65, 243, 68);
   List meal = [
     'Somsa',
     'Manti',
@@ -104,30 +101,29 @@ class _MyAppState extends State<MyApp> {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0)),
             elevation: 10,
-            color: Colors.yellow,
+            color: Colors.purple,
             child: ListTile(
+              onTap: () => Navigator.pushNamed(context, wid[index]),
               onLongPress: () {
                 direct++;
                 direct = direct % 3;
                 if (direct == 0) {
-                  col = Color(0xFFD3F3D5);
+                  col = Color.fromARGB(255, 77, 62, 210);
                 }
                 if (direct == 1) {
-                  col = Color.fromARGB(255, 226, 224, 244);
+                  col = Color.fromARGB(255, 224, 120, 141);
                 }
                 if (direct == 2) {
-                  col = Color.fromARGB(255, 238, 243, 221);
+                  col = Color.fromARGB(255, 195, 236, 60);
                 }
                 setState(() {});
               },
               shape: BeveledRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(35),
-                      bottomRight: Radius.circular(35)),
+                  borderRadius: BorderRadius.circular(37),
                   side: BorderSide(width: 2, color: Colors.black)),
               tileColor: col,
               iconColor: Colors.black,
-              textColor: Colors.blue,
+              textColor: Colors.white,
               trailing: IconButton(
                 icon: Icon(Icons.arrow_forward_ios),
                 onPressed: () {
@@ -136,12 +132,14 @@ class _MyAppState extends State<MyApp> {
                   });
                 },
               ),
-              subtitle: Center(child: Text('${index + 1}')),
+              subtitle: Center(child: Text('')),
               leading: CircleAvatar(
-                  backgroundColor: Colors.yellow,
-                  child: Icon(Icons.dinner_dining_outlined)),
+                  backgroundColor: Colors.orange, child: Text('${index + 1}')),
               title: Center(
-                child: Text(meal[index]),
+                child: Text(
+                  meal[index],
+                  style: TextStyle(fontSize: 25, color: Colors.blue),
+                ),
               ),
             ),
           );

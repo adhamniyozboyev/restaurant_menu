@@ -19,7 +19,10 @@ class _YaxnaState extends State<Yaxna> {
       body: Column(
         children: [
           Center(child: Image.asset('images/yaxna.jpg')),
-          Card(
+          Card( shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+              side: BorderSide(color: Colors.red, width: 3)),
+          color: Color.fromARGB(255, 170, 154, 251),
             child: Text(
               '''Quyidagi mahsulotlar kerak bo‘ladi:
 
@@ -32,7 +35,7 @@ class _YaxnaState extends State<Yaxna> {
 *piyoz — 1 dona;
 *ta’bga ko‘ra tuz va ziravorlar;
 *selderey.''',
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 30),
             ),
           )
         ],

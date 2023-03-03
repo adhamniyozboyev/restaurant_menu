@@ -19,7 +19,10 @@ class _ChuchvaraState extends State<Chuchvara> {
       body: Column(
         children: [
           Center(child: Image.asset('images/chuchvara.jpg')),
-          Center(
+          Card(  shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+              side: BorderSide(color: Color.fromARGB(255, 232, 27, 12), width: 3)),
+          color: Color.fromARGB(255, 188, 247, 100),
             child: Text(
               ''' Masalliqlar:
 XAMIRIGA:
@@ -38,7 +41,7 @@ XAMIRIGA:
 *1 bosh piyoz
 *1 osh qoshiq pomidor pastasi
 *bezatish uchun ko'katlar.''',
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 25.0),
             ),
           )
         ],

@@ -14,7 +14,7 @@ class _SomsaState extends State<Somsa> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Shourma'),
+        title: Text('Somsa'),
       ),
       body: Column(children: [
         Center(child: Image.asset('images/somsa.jpg')),
@@ -22,7 +22,7 @@ class _SomsaState extends State<Somsa> {
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15),
               side: BorderSide(color: Colors.red, width: 3)),
-          color: Color(0xFF9BB1D7),
+          color: Color.fromARGB(255, 34, 187, 75),
           child: Text(
             '''  Portsiya:  
 12
@@ -46,9 +46,9 @@ SURTISH UCHUN
 *2 ta tuxum oqi
 *2 ta tuxum sarig'i
 *30 gramm kunjut''',
-            style: TextStyle(fontSize: 20),
+            style: TextStyle(fontSize: 20,
           ),
-        )
+        ))
       ]),
     );
   }

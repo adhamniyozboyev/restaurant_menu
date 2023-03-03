@@ -20,7 +20,12 @@ class _LagmonState extends State<Lagmon> {
         children: [
           Center(child: Image.asset('images/lagmon.jpg')),
           Card(
-            child: Text(''' Masalliqlar:
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+                side: BorderSide(color: Colors.red, width: 3)),
+            color: Color.fromARGB(255, 73, 225, 106),
+            child: Text(
+              ''' Masalliqlar:
 Portsiya:  
 5
  
@@ -41,7 +46,9 @@ Portsiya:
 *ta'bga ko'ra maydalangan arpabodiyon
 *ta'bga ko'ra maydalangan badyan
 *ta'bga ko'ra tuz va murch
-''',style: TextStyle(fontSize: 20),),
+''',
+              style: TextStyle(fontSize: 20),
+            ),
           )
         ],
       ),
