@@ -12,11 +12,29 @@ class Manti extends StatefulWidget {
 class _MantiState extends State<Manti> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
         title: Text('Manti'),
       ),
       body: Column(
-        children: [Center(child: Image.asset('images/manti.jpg'))],
+        children: [
+          Center(child: Image.asset('images/manti.jpg')),
+          Card(
+            child: Text(''' Masalliqlar:
+Portsiya:  
+10
+ 
+*XAMIRI UCHUN:
+*300 gramm un
+*200 millilitr suv
+*2 osh qoshiq o'simlik yog'i
+*0,5 choy qoshiq tuz
+*NACHINKASI UCHUN
+*200 gramm mol go'shtidan qiyma
+*100 gramm piyoz
+*ta'bga ko'ra tuz va murch''',style: TextStyle(fontSize: 20),),
+          )
+        ],
       ),
     );
   }

@@ -12,11 +12,38 @@ class Lagmon extends StatefulWidget {
 class _LagmonState extends State<Lagmon> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
         title: Text('Lag\'mon'),
       ),
       body: Column(
-        children: [Image.asset('images/lagmon.jpg')],
+        children: [
+          Center(child: Image.asset('images/lagmon.jpg')),
+          Card(
+            child: Text(''' Masalliqlar:
+Portsiya:  
+5
+ 
+*500 gramm un
+*230 millilitr iliq suv
+*15 gramm tuz
+*1 ta tuxum
+*1 tadan har xil rangli bulg'or qalampiri
+*400 gramm mol go'shti
+*250 gramm piyoz
+*30 millilitr soya qaylasi
+*8-10 ta pekin karami bargi
+*250 gramm pomidor
+*2 ta sarimsoqpiyoz tishchasi
+*seldrey shoxchalari
+*100 gramm pomidor pastasi
+*ta'bga ko'ra maydalangan zanjabil
+*ta'bga ko'ra maydalangan arpabodiyon
+*ta'bga ko'ra maydalangan badyan
+*ta'bga ko'ra tuz va murch
+''',style: TextStyle(fontSize: 20),),
+          )
+        ],
       ),
     );
   }

@@ -17,7 +17,25 @@ class _YaxnaState extends State<Yaxna> {
         title: Text('Yaxna'),
       ),
       body: Column(
-        children: [Image.asset('images/yaxna.jpg')],
+        children: [
+          Center(child: Image.asset('images/yaxna.jpg')),
+          Card(
+            child: Text(
+              '''Quyidagi mahsulotlar kerak bo‘ladi:
+
+*kartoshka — 4 dona;
+*tovuq go‘shti;
+*sabzi — 1 dona;
+*karam — 1 dona;
+*ta’bga ko‘ra sarimsoq piyoz;
+*shovul;
+*piyoz — 1 dona;
+*ta’bga ko‘ra tuz va ziravorlar;
+*selderey.''',
+              style: TextStyle(fontSize: 20),
+            ),
+          )
+        ],
       ),
     );
   }

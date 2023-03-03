@@ -12,10 +12,35 @@ class Burger extends StatefulWidget {
 class _BurgerState extends State<Burger> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text('Burger'),),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Burger'),
+      ),
       body: Column(
+        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset('images/burger.jpg')
+          Center(
+            child: Image.asset(
+              'images/burger.jpg',
+            ),
+          ),
+          Card(
+             shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+              side: BorderSide(color: Colors.red, width: 3)),
+          color: Color(0xFF9BB1D7),
+            child: Text(
+              '''Kerakli mahsulotlar (4 portsiya uchun):
+
+ * 700gr mol go‘shtining qiymasi.
+ *  (menda yog‘sizi)
+  *1 dona burger noni.
+  *1 osh qoshiq mayonez.
+  *1 osh qoshiq ketchup.
+  *Tuz va murch.''',
+              style: TextStyle(fontSize: 20),
+            ),
+          )
         ],
       ),
     );

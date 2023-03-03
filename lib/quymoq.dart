@@ -12,11 +12,32 @@ class Quymoq extends StatefulWidget {
 class _QuymoqState extends State<Quymoq> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
         title: Text('Quymoq'),
       ),
       body: Column(
-        children: [Image.asset('images/quymoq.jpg')],
+        children: [
+          Center(child: Image.asset('images/quymoq.jpg')),
+          Card(
+            child: Text(''' Masalliqlar:
+Portsiya:  
+18
+ 
+*BLINCHIK (QUYMOQ) UCHUN
+*500 millilitr iliq sut
+*2 ta tuxum
+*220 gramm un
+*1 choy qoshiq qabartma (razrixlitel)
+*1 choy qoshiq tuz
+*2 osh qoshiq o'simlik yog'i
+*150 millilitr qaynoq suv
+*30 gramm ko'kat
+*NACHINKA UCHUN
+*150 gramm tuzlangan losos balig'i filesi
+*200 gramm tvorogli pishloq''',style: TextStyle(fontSize: 20),),
+          )
+        ],
       ),
     );
   }

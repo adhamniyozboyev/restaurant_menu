@@ -17,7 +17,31 @@ class _ChuchvaraState extends State<Chuchvara> {
         title: Text('Chuchvara'),
       ),
       body: Column(
-        children: [Image.asset('images/chuchvara.jpg')],
+        children: [
+          Center(child: Image.asset('images/chuchvara.jpg')),
+          Center(
+            child: Text(
+              ''' Masalliqlar:
+XAMIRIGA:
+*400 gramm un
+*1 ta tuxum
+*170 millilitr iliq suv 
+*1 choy qoshiq tuz
+*2 osh qoshiq o'simlik yog'i
+*ASOSIGA:
+*400 gramm mol go'shtidan qiyma
+*2-3 ta piyoz piyoz
+*ta'bga qarab tuz va murch
+*ta'bga qarab zira
+*qovurish uchun o'simlik yog'i
+*USTIGA:
+*1 bosh piyoz
+*1 osh qoshiq pomidor pastasi
+*bezatish uchun ko'katlar.''',
+              style: TextStyle(fontSize: 20),
+            ),
+          )
+        ],
       ),
     );
   }

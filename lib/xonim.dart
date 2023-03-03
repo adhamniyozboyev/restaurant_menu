@@ -12,11 +12,39 @@ class Xonim extends StatefulWidget {
 class _XonimState extends State<Xonim> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
         title: Text('Xonim'),
       ),
       body: Column(
-        children: [Image.asset('images/xonim.jpg')],
+        children: [
+          Center(child: Image.asset('images/xonim.jpg')),
+          Card(
+            child: Text(
+              ''' Masalliqlar:
+Portsiya:  
+10
+ 
+*XAMIRIGA:
+*700 gramm un
+*250-300 millilitr suv 
+*1.5 choy qoshiq tuz
+*20 millilitr o'simlik yog'i
+*ASOSIGA:
+*300 gramm qiyma
+*2 ta piyoz
+*2 ta qizil sabzi
+*2 ta kartoshka
+*ta'bga ko'ra tuz va murch
+*ta'bga ko'ra zira
+*3 osh qoshiq o'simlik yog'i
+*BEZATISH UCHUN:
+*1 bosh piyoz
+*1 bog' shivit''',
+              style: TextStyle(fontSize: 20),
+            ),
+          )
+        ],
       ),
     );
   }
